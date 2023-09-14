@@ -1,10 +1,12 @@
 package com.findmoreplus.admin.service.impl;
 
 import cn.dev33.satoken.stp.StpUtil;
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.ObjectUtil;
 import com.findmoreplus.admin.domain.bean.User;
 import com.findmoreplus.admin.domain.bo.LoginBo;
 import com.findmoreplus.admin.domain.bo.UpdatePassWordBo;
+import com.findmoreplus.admin.domain.bo.UpdateUserBo;
 import com.findmoreplus.admin.mapper.UserMapper;
 import com.findmoreplus.admin.service.AuthService;
 import com.findmoreplus.admin.service.UserService;
@@ -58,5 +60,12 @@ public class AuthServiceImpl implements AuthService {
         newUser.setId(user.getId());
         newUser.setPassword(bo.getNewPassWord());
         userService.updateById(newUser);
+    }
+
+    @Override
+    public void updateUser(UpdateUserBo bo) {
+        User user = BeanUtil.copyProperties(bo, User.class);
+        user.setId(StpUtil.getSession().getInt("id"));
+        userService.updateById(user);
     }
 }
