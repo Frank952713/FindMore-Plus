@@ -1,4 +1,4 @@
-package com.findmoreplus.admin.enums;
+package com.findmoreplus.common.enums;
 
 /**
  * @author WEIR

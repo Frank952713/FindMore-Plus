@@ -3,7 +3,7 @@ package com.findmoreplus.admin.controller;
 
 import com.findmoreplus.admin.domain.bean.Pictures;
 import com.findmoreplus.admin.domain.dto.ResultState;
-import com.findmoreplus.admin.enums.UploadEnum;
+import com.findmoreplus.common.enums.UploadEnum;
 import com.findmoreplus.admin.service.ActivityService;
 import com.findmoreplus.admin.service.UserService;
 import com.findmoreplus.admin.service.impl.ActivityServiceImpl;

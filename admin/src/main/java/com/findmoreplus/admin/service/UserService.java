@@ -2,12 +2,14 @@ package com.findmoreplus.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.findmoreplus.admin.domain.bean.User;
+import org.springframework.stereotype.Service;
 
 /**
  * @author WEIR
  * @description
  * @date 8/10/2021 - 15:37
  */
+@Service
 public interface UserService extends IService<User> {
     /**
      * 检查用户是否存在
