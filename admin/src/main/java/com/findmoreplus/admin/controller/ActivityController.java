@@ -7,6 +7,8 @@ import com.findmoreplus.admin.domain.dto.ResultState;
 import com.findmoreplus.admin.service.ActivityService;
 import com.findmoreplus.admin.utils.JsonUtil;
 import com.findmoreplus.admin.utils.ObjectUtil;
+import io.swagger.annotations.Api;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +19,7 @@ import java.util.List;
  * @description
  * @date 13/10/2021 - 19:02
  */
+@Api()
 @WebServlet("/Activity")
 public class ActivityController extends BaseController {
 

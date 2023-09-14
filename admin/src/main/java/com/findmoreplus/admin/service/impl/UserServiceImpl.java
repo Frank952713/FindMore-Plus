@@ -1,26 +1,24 @@
 package com.findmoreplus.admin.service.impl;
 
-import com.findmoreplus.admin.dao.UserDao;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.findmoreplus.admin.domain.bean.User;
+import com.findmoreplus.admin.mapper.UserMapper;
 import com.findmoreplus.admin.service.UserService;
-import com.findmoreplus.admin.utils.SqlUtil;
-import org.apache.ibatis.session.SqlSession;
-
 
 /**
  * @author WEIR
  * @description
  * @date 8/10/2021 - 21:03
  */
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
-    private final SqlSession openSession = SqlUtil.getOpeningSession();
-    private final UserDao userDao = openSession.getMapper(UserDao.class);
+//    private final SqlSession openSession = SqlUtil.getOpeningSession();
+//    private final this.baseMapper this.baseMapper = openSession.getMapper(this.baseMapper.class);
 
     @Override
     public Boolean checkUserCount(String count) {
         try {
-            return userDao.checkCountExit(count);
+            return this.baseMapper.checkCountExit(count);
         } catch (Exception e) {
             throw new RuntimeException("检验用户名失败！");
         }
@@ -29,7 +27,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User login(String phone, String password) {
         try {
-            return userDao.selectInfoByPhone(phone, password);
+            return this.baseMapper.selectInfoByPhone(phone, password);
         } catch (Exception e) {
             throw new RuntimeException("登录失败！");
         }
@@ -37,12 +35,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void register(User user) {
-        user.setId(userDao.countAllUser());
+        user.setId(this.baseMapper.countAllUser());
         //设置用户默认名称
-        user.setUsername(User.BASE_NAME+user.getId());
+        user.setUsername(User.BASE_NAME + user.getId());
         try {
-            userDao.addUser(user);
-            openSession.commit();
+            this.baseMapper.addUser(user);
+//            openSession.commit();
         } catch (Exception e) {
             throw new RuntimeException("注册失败!");
         }
@@ -51,7 +49,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User queryUserInfo(Integer id) {
         try {
-            return userDao.selectInfoById(id);
+            return this.baseMapper.selectInfoById(id);
         } catch (Exception e) {
             throw new RuntimeException("获取用户信息失败!");
         }
@@ -60,8 +58,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public void updateUser(User user) {
         try {
-            userDao.addInfo(user);
-            openSession.commit();
+            this.baseMapper.addInfo(user);
+//            openSession.commit();
         } catch (Exception e) {
             throw new RuntimeException("完善资料失败！");
         }
@@ -70,8 +68,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public void addUserImg(Integer id, String pic) {
         try {
-            userDao.addHeadPortrait(pic,id);
-            openSession.commit();
+            this.baseMapper.addHeadPortrait(pic, id);
+//            openSession.commit();
         } catch (Exception e) {
             throw new RuntimeException("添加头像失败！");
         }

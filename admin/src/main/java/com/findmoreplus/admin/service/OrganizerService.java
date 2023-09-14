@@ -1,6 +1,7 @@
 package com.findmoreplus.admin.service;
 
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.findmoreplus.admin.domain.bean.Organizer;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * @description
  * @date 20/10/2021 - 19:31
  */
-public interface OrganizerService {
+public interface OrganizerService extends IService<Organizer> {
     /**
      * 通过手机号码和密码查询组织
      *

@@ -1,5 +1,6 @@
 package com.findmoreplus.admin.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.findmoreplus.admin.domain.bean.ActivityUser;
 import com.findmoreplus.admin.domain.bean.Participater;
 import com.findmoreplus.admin.domain.bean.Pictures;
@@ -10,7 +11,7 @@ import java.util.List;
  * @description
  * @date 14/10/2021 - 16:01
  */
-public interface ActivityService {
+public interface ActivityService extends IService<ActivityUser> {
     /**
      * 增加活动
      *

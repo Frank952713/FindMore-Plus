@@ -17,7 +17,6 @@ import springfox.documentation.service.Response;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
-import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
 

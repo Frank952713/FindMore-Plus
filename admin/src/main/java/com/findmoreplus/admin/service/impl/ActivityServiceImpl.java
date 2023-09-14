@@ -1,12 +1,12 @@
 package com.findmoreplus.admin.service.impl;
 
-import com.findmoreplus.admin.dao.ActivityDao;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.findmoreplus.admin.mapper.ActivityMapper;
 import com.findmoreplus.admin.domain.bean.ActivityUser;
 import com.findmoreplus.admin.domain.bean.Participater;
 import com.findmoreplus.admin.domain.bean.Pictures;
 import com.findmoreplus.admin.service.ActivityService;
-import com.findmoreplus.admin.utils.SqlUtil;
-import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,17 +16,20 @@ import java.util.List;
  * @description
  * @date 14/10/2021 - 16:04
  */
-public class ActivityServiceImpl implements ActivityService {
+@Service
+public class ActivityServiceImpl extends ServiceImpl<ActivityMapper,ActivityUser> implements ActivityService {
 
-    private final SqlSession openSession = SqlUtil.getOpeningSession();
-    private final ActivityDao activityDao = openSession.getMapper(ActivityDao.class);
+//    private final SqlSession openSession = SqlUtil.getOpeningSession();
+//    private final this.baseMapper this.baseMapper = openSession.getMapper(this.baseMapper.class);
 
+//    @Autowired
+//    private 
     @Override
     public void addActivity(ActivityUser activityUser) {
         try {
-            activityUser.setId(activityDao.countAllAct());
-            activityDao.addActivity(activityUser);
-            openSession.commit();
+            activityUser.setId(this.baseMapper.countAllAct());
+            this.baseMapper.addActivity(activityUser);
+//            openSession.commit();
         } catch (Exception e) {
             throw new RuntimeException("添加活动失败!");
         }
@@ -34,14 +37,14 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public void deleteActivityById(Integer id) {
-        activityDao.deleteActivity(id);
+        this.baseMapper.deleteActivity(id);
     }
 
     @Override
     public void updateActivityById(Integer id, ActivityUser activityUser) {
         try {
-            activityDao.addActivityInfo(id, activityUser.getInfo());
-            openSession.commit();
+            this.baseMapper.addActivityInfo(id, activityUser.getInfo());
+//            openSession.commit();
         } catch (Exception e) {
             throw new RuntimeException("更新活动信息失败!");
         }
@@ -49,19 +52,19 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public ActivityUser selectActivity(Integer id) {
-        return activityDao.selectInfoById(id);
+        return this.baseMapper.selectInfoById(id);
     }
 
     @Override
     public boolean checkActivityName(String name) {
-        return activityDao.checkActivityExist(name);
+        return this.baseMapper.checkActivityExist(name);
     }
 
     @Override
     public void addPicture(Integer id, String pic) {
         try {
-            activityDao.addActivityPicture(id, pic);
-            openSession.commit();
+            this.baseMapper.addActivityPicture(id, pic);
+//            openSession.commit();
         } catch (Exception e) {
             throw new RuntimeException("注册失败!");
         }
@@ -69,25 +72,25 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public List<Pictures> getPicture(Integer id) {
-        return activityDao.selectPicturesById(id);
+        return this.baseMapper.selectPicturesById(id);
     }
 
     @Override
     public List<Participater> selectStudentInActivity(Integer id) {
-        return activityDao.selectStudentsByArtId(id);
+        return this.baseMapper.selectStudentsByArtId(id);
     }
 
     @Override
     public List<ActivityUser> getActivity(int start, int end) {
-        return activityDao.getActivity(start, end);
+        return this.baseMapper.getActivity(start, end);
     }
 
 
     @Override
     public void addActivityInfo(Integer id, String info) {
         try {
-            activityDao.addActivityInfo(id, info);
-            openSession.commit();
+            this.baseMapper.addActivityInfo(id, info);
+//            openSession.commit();
         } catch (Exception e) {
             throw new RuntimeException("添加活动失败!");
         }
@@ -95,12 +98,12 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public List<ActivityUser> selectActivitiesByOrganizer(Integer organizer) {
-        return activityDao.selectActivitiesByOrganizer(organizer);
+        return this.baseMapper.selectActivitiesByOrganizer(organizer);
     }
 
     @Override
     public List<ActivityUser> selectInfoIncludePars(Integer id) {
-        return activityDao.selectInfoIncludePars(id);
+        return this.baseMapper.selectInfoIncludePars(id);
     }
 
     @Override

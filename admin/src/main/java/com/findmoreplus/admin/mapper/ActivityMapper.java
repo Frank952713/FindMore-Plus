@@ -1,5 +1,6 @@
-package com.findmoreplus.admin.dao;
+package com.findmoreplus.admin.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.findmoreplus.admin.domain.bean.ActivityUser;
 import com.findmoreplus.admin.domain.bean.Organizer;
 import com.findmoreplus.admin.domain.bean.Participater;
@@ -15,7 +16,7 @@ import java.util.Map;
  * @description
  * @date 9/10/2021 19:08
  */
-public interface ActivityDao {
+public interface ActivityMapper extends BaseMapper<ActivityUser> {
 
     //-----------------------------------------------------------------------------------------------
     //-----------------------------------------------------------------------------------------------

@@ -1,9 +1,11 @@
-package com.findmoreplus.admin.dao;
+package com.findmoreplus.admin.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.findmoreplus.admin.domain.bean.Organizer;
 import org.apache.ibatis.annotations.Param;
 
 
+import javax.sql.rowset.BaseRowSet;
 import java.util.List;
 
 /**
@@ -11,7 +13,7 @@ import java.util.List;
  * @description
  * @date 31/10/2021 - 13:30
  */
-public interface OrganizatorDao {
+public interface OrganizatorMapper extends BaseMapper<Organizer> {
     //-----------------------------------------------------------------------------------------------
     //-----------------------------------------------------------------------------------------------
     /**

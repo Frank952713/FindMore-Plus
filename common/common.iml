@@ -34,11 +34,14 @@
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.2.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: io.swagger:swagger-models:1.6.6" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.4" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
+    <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.6.6" level="project" />
     <orderEntry type="library" name="Maven: com.github.xiaoymin:Knife4j-spring-boot-starter:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.github.xiaoymin:knife4j-spring-boot-autoconfigure:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.github.xiaoymin:knife4j-spring:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: com.github.xiaoymin:knife4j-annotations:3.0.3" level="project" />
-    <orderEntry type="library" name="Maven: io.swagger:swagger-annotations:1.5.22" level="project" />
     <orderEntry type="library" name="Maven: io.swagger.core.v3:swagger-annotations:2.1.2" level="project" />
     <orderEntry type="library" name="Maven: com.github.xiaoymin:knife4j-core:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.25.0-GA" level="project" />
@@ -55,8 +58,6 @@
     <orderEntry type="library" name="Maven: io.springfox:springfox-oas:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.swagger.core.v3:swagger-models:2.1.2" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-bean-validators:3.0.0" level="project" />
-    <orderEntry type="library" name="Maven: io.swagger:swagger-models:1.5.22" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.4" level="project" />
     <orderEntry type="library" name="Maven: io.swagger:swagger-core:1.5.22" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.9" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.4" level="project" />
@@ -102,7 +103,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:json-smart:2.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: jakarta.activation:jakarta.activation-api:1.2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.5.2" level="project" />

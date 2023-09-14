@@ -1,5 +1,6 @@
 package com.findmoreplus.admin.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.findmoreplus.admin.domain.bean.User;
 
 /**
@@ -7,7 +8,7 @@ import com.findmoreplus.admin.domain.bean.User;
  * @description
  * @date 8/10/2021 - 15:37
  */
-public interface UserService {
+public interface UserService extends IService<User> {
     /**
      * 检查用户是否存在
      * @param count
