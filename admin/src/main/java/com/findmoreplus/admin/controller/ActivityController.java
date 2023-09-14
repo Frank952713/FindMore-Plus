@@ -19,7 +19,6 @@ import java.util.List;
  * @description
  * @date 13/10/2021 - 19:02
  */
-@Api()
 @WebServlet("/Activity")
 public class ActivityController extends BaseController {
 

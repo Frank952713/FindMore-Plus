@@ -38,6 +38,7 @@ public class AuthServiceImpl implements AuthService {
         for (Field field : user.getClass().getDeclaredFields()) {
             //允许访问私有字段
             field.setAccessible(true);
+            // 将用户的数据放入上下文session中
             StpUtil.getSession().set(field.getName(), field.get(user));
         }
         return user;
