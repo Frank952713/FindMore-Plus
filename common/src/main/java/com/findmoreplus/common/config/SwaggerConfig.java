@@ -47,11 +47,12 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build();
 
-        String ipAddress = InetAddress.getLocalHost().getHostAddress();
+//        String ipAddress = InetAddress.getLocalHost().getHostAddress();
         // 控制台输出Swagger3接口文档地址
-        log.info("Swagger3接口文档地址: http://{}:{}{}/swagger-ui.html", ipAddress, port, contextPath);
+//        log.info("Swagger3接口文档地址: http://{}:{}{}/swagger-ui.html", ipAddress, port, contextPath);
         // 控制台输出Knife4j增强接口文档地址
-        log.info("Knife4j增强接口文档地址: http://{}:{}{}/doc.html", ipAddress, port, contextPath);
+        //  Knife4j文档地址：http://ip:port/doc.html
+//        log.info("Knife4j增强接口文档地址: http://{}:{}{}/doc.html", ipAddress, port, contextPath);
         return docket;
     }
 
