@@ -18,6 +18,11 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+        <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>Knife4j-spring-boot-starter</artifactId>
             <version>3.0.3</version>

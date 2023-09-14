@@ -25,9 +25,6 @@ public class ActivityController extends BaseController {
 
     /**
      * 发布活动
-     *
-     * @param request
-     * @param response
      */
     public void addActivity(HttpServletRequest request, HttpServletResponse response) {
 
@@ -46,9 +43,6 @@ public class ActivityController extends BaseController {
 
     /**
      * 删除活动
-     *
-     * @param request
-     * @param response
      */
     public void deleteActivity(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
@@ -58,8 +52,6 @@ public class ActivityController extends BaseController {
     /**
      * 更新活动
      *
-     * @param request
-     * @param response
      */
     public void updateActivity(HttpServletRequest request, HttpServletResponse response) {
         //调用ObjectUtil工具类获取实例
@@ -78,12 +70,7 @@ public class ActivityController extends BaseController {
         JsonUtil.returnJson(response, result);
     }
 
-    /**
-     * 获取单个活动
-     *
-     * @param request
-     * @param response
-     */
+
     public void selectActivity(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
         ActivityUser activityUser = activityService.selectActivity(Integer.valueOf(id));
@@ -91,10 +78,7 @@ public class ActivityController extends BaseController {
         JsonUtil.returnJson(response, result);
     }
 
-    /**
-     * @param request
-     * @param response
-     */
+
     public void getActList(HttpServletRequest request, HttpServletResponse response) {
 
         List<ActivityUser> actList = activityService.getActivity(-1, 1);
@@ -103,10 +87,7 @@ public class ActivityController extends BaseController {
         JsonUtil.returnJson(response, result);
     }
 
-    /**
-     * @param request
-     * @param response
-     */
+
     public void getUserActList(HttpServletRequest request, HttpServletResponse response) {
         User nowUser= (User) request.getSession().getAttribute("nowUser");
 //activityService.
