@@ -1,0 +1,13 @@
+package com.findmoreplus.dbsubscribe;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DbSubscribeApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DbSubscribeApplication.class, args);
+    }
+
+}
