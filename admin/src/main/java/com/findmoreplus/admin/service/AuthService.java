@@ -4,9 +4,7 @@ package com.findmoreplus.admin.service;
 import com.findmoreplus.admin.domain.bean.User;
 import com.findmoreplus.admin.domain.bo.LoginBo;
 import com.findmoreplus.admin.domain.bo.UpdatePassWordBo;
-import com.findmoreplus.admin.domain.bo.UpdateUserBo;
-
-import java.util.Map;
+import com.findmoreplus.admin.domain.bo.AddOrUpdateUserBo;
 
 public interface AuthService {
     /**
@@ -24,5 +22,5 @@ public interface AuthService {
      */
     void updatePassAccountWord(UpdatePassWordBo updatePassWordBo);
 
-    void updateUser(UpdateUserBo bo);
+    void updateUser(AddOrUpdateUserBo bo);
 }

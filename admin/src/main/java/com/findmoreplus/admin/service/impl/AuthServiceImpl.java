@@ -6,7 +6,7 @@ import cn.hutool.core.util.ObjectUtil;
 import com.findmoreplus.admin.domain.bean.User;
 import com.findmoreplus.admin.domain.bo.LoginBo;
 import com.findmoreplus.admin.domain.bo.UpdatePassWordBo;
-import com.findmoreplus.admin.domain.bo.UpdateUserBo;
+import com.findmoreplus.admin.domain.bo.AddOrUpdateUserBo;
 import com.findmoreplus.admin.mapper.UserMapper;
 import com.findmoreplus.admin.service.AuthService;
 import com.findmoreplus.admin.service.UserService;
@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Field;
-import java.util.Map;
 
 @Service
 public class AuthServiceImpl implements AuthService {
@@ -63,7 +62,7 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public void updateUser(UpdateUserBo bo) {
+    public void updateUser(AddOrUpdateUserBo bo) {
         User user = BeanUtil.copyProperties(bo, User.class);
         user.setId(StpUtil.getSession().getInt("id"));
         userService.updateById(user);

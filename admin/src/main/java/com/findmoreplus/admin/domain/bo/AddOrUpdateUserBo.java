@@ -1,28 +1,43 @@
 package com.findmoreplus.admin.domain.bo;
+
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.findmoreplus.admin.domain.bean.Participater;
 import com.findmoreplus.admin.domain.bean.UserPet;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.apache.ibatis.type.Alias;
+import org.hibernate.validator.constraints.Length;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.groups.Default;
 import java.io.Serializable;
 
 /**
- * @author DAHUANG
- * @description 用户
- * @date 7/10/2021 18:45
+ * 用户
  */
 
 @Data
-@ApiModel(description = "更新用户对象")
-public class UpdateUserBo {
+@ApiModel(description = "账号信息")
+public class AddOrUpdateUserBo {
 
+    /*
+     *更新验证
+     */
+    public interface Update extends Default {
+    }
+    @NotNull(message = "用户名不能为空")
+    @Length(max = 10,message = "用户名最多输入10个字")
+    @ApiModelProperty(value = "用户名")
     //用户名
     String username;
+    @NotNull(message = "账号id不能为空", groups = Update.class)
+    @ApiModelProperty(value = "账号id")
     //用户id
     Integer id;
+    @NotNull(message = "学号不能为空", groups = Update.class)
+    @ApiModelProperty(value = "学号")
     //用户学号
     Integer count;
     //用户专业
