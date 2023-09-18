@@ -8,10 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="xxl-job" />
+        <module name="common-job" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
+      <module name="common-job" target="1.8" />
       <module name="core" target="1.8" />
       <module name="findmore-core" target="1.8" />
     </bytecodeTargetLevel>
@@ -21,8 +24,10 @@
       <module name="FindMore-Plus" options="" />
       <module name="admin" options="" />
       <module name="common" options="-parameters" />
+      <module name="common-job" options="-parameters" />
       <module name="core" options="-parameters" />
       <module name="findmore-core" options="-parameters" />
+      <module name="xxl-job" options="-parameters" />
     </option>
   </component>
 </project>

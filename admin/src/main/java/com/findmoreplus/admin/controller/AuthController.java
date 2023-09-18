@@ -1,8 +1,6 @@
 package com.findmoreplus.admin.controller;
 
 import cn.dev33.satoken.stp.StpUtil;
-import cn.dev33.satoken.util.SaResult;
-import cn.hutool.http.server.HttpServerRequest;
 import com.findmoreplus.admin.domain.bean.User;
 import com.findmoreplus.admin.domain.bo.LoginBo;
 import com.findmoreplus.admin.domain.bo.UpdatePassWordBo;
@@ -16,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
