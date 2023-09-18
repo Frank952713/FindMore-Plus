@@ -21,7 +21,7 @@
     <property name="log.name" value="eschool"/>
     <!-- 这里是我配置的输出控制台和输出文件中的格式 控制台可以彩色输出 文件中无法彩色输出 -->
     <property name="console_log_pattern"
-              value="%white(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %cyan(%logger{36}:%L) - %green(%msg%n)"/>
+              value="%yellow(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %cyan(%logger{36}:%L) - %green(%msg%n)"/>
     <property name="file_log_pattern"
               value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36}:%L - %msg%n"/>
 
