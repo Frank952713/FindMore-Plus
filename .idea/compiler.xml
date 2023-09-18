@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="common-job" />
         <module name="common" />
         <module name="xxl-job" />
-        <module name="common-job" />
+        <module name="dbsubscribe" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="common" options="-parameters" />
       <module name="common-job" options="-parameters" />
       <module name="core" options="-parameters" />
+      <module name="dbsubscribe" options="-parameters" />
       <module name="findmore-core" options="-parameters" />
       <module name="xxl-job" options="-parameters" />
     </option>
