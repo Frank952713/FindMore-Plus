@@ -1,5 +1,0 @@
-server:
-  port: 63081
-spring:
-  application:
-    name: common

@@ -8,16 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common-job" />
-        <module name="common" />
-        <module name="xxl-job" />
-        <module name="dbsubscribe" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="admin" target="1.8" />
       <module name="common" target="1.8" />
       <module name="common-job" target="1.8" />
       <module name="core" target="1.8" />
+      <module name="dbsubscribe" target="1.8" />
       <module name="findmore-core" target="1.8" />
+      <module name="xxl-job" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
